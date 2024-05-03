@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import img_1 from "../assets/images/1.jpg";
-import img_2 from "../assets/images/2.jpg";
-import img_3 from "../assets/images/3.jpg";
+import img_1 from "/src/assets/images/1.jpg";
+import img_2 from "/src/assets/images/2.jpg";
+import img_3 from "/src/assets/images/3.jpg";
 import AddCourse from "./addCourse";
 
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
@@ -9,17 +9,18 @@ import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 export default function Course() {
   const courseList = [
     {
-      imagen: img_1,
-      title: "Implementación metodos comp.",
-      prof: "Vladimir",
-      codigoClase: "2145",
-    },
-    {
       imagen: img_2,
       title: "Construcción de Software",
       prof: "Axel",
       codigoClase: "1004",
     },
+    {
+      imagen: img_1,
+      title: "Implementación metodos",
+      prof: "Vladimir",
+      codigoClase: "2145",
+    },
+
     {
       imagen: img_3,
       title: "arte",
@@ -96,7 +97,7 @@ export default function Course() {
             <div className="w-1/2 ml-2 flex flex-col justify-between items-end break-words">
               {/* Div for the heading */}
               <div>
-                <h2 className=" text-white text-xl font-semibold">
+                <h2 className=" text-white text-xl ml-2 font-semibold">
                   {courseList[currentSlide].title}
                 </h2>
               </div>
