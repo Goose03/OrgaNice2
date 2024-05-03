@@ -1,5 +1,4 @@
 import db from "../db_connection.js";
-
 export const postInscribirClase=(req, res) => {
     const est_id = req.query.est_id;
     const class_id = req.query.class_id;
