@@ -1,6 +1,7 @@
 // assets
 import home from "/src/assets/home.png";
 import home2 from "/src/assets/home2.png";
+import equipo from "/src/assets/equipo.jpg";
 
 // Componentes
 import OlgaCard from "./olgaCard";
@@ -68,7 +69,7 @@ export default function AboutPage() {
         <h1 className="text-5xl mr-4 font-bold text-dpurp tracking-wide">
           Conoce a nuestro equipo
         </h1>
-        <img className="h-auto w-2/5 rounded-lg mt-10" src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg" alt=""/>
+        <img className="h-auto w-2/5 rounded-lg mt-10" src={equipo} alt=""/>
         </div>
         <div className="absolute inset-x-0 bottom-0">
           <Footer />
