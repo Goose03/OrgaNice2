@@ -13,19 +13,9 @@ import Teacher from "./pages/teacher/clases/Teacher"
 
 function App() {
   const [tipo, setTipo] = useState(0);
-  const [data, setData] = useState("");
-
-  useEffect(() => {
-    console.log("hi!")
-    fetch('http://localhost:3306/estudiante')
-    .then(res => res.json())
-    .then(data => setData(data))
-    .catch(err => console.log(err))
-  }, [])
 
   return (
     <>
-      <p>{data}</p>
       <NavBar />
       <Routes>
         <Route path="/" element={<AboutPage />} />

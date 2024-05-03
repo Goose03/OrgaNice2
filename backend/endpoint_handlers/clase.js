@@ -1,4 +1,6 @@
 import db from "../db_connection.js";
+
+
 export const postInscribirClase=(req, res) => {
     const est_id = req.query.est_id;
     const class_id = req.query.class_id;
@@ -10,5 +12,18 @@ export const postInscribirClase=(req, res) => {
             return;
         }
         res.json(results[0]);
+    });
+};
+
+export const getClase=(req, res) => {
+    const class_id = req.query.class_id;
+    db.query("CALL getClase(?)", [class_id], (error, results) => {
+    
+        if (error) {
+            console.error("Error al obtener la clase:", error);
+            res.status(500).json({ error: "Internal server error" });
+            return;
+        }
+        res.json(results);
     });
 };

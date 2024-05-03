@@ -7,8 +7,8 @@ import express from 'express';
 import cors from 'cors';
 import {getTables} from './endpoint_handlers/test_endpoint.js';
 import {createEstudiante,getEstudianteId, getClaseEstudiante, deleteEstudiante} from './endpoint_handlers/estudiante.js';
-import { getTareasEstudiante, patchTareaComp} from './endpoint_handlers/tarea.js';
-import { postInscribirClase } from './endpoint_handlers/clase.js';
+import { getTareasEstudiante, patchTareaComp, postTarea} from './endpoint_handlers/tarea.js';
+import { postInscribirClase, getClase } from './endpoint_handlers/clase.js';
 
 //Define port
 const Port = 3000;
@@ -42,8 +42,10 @@ app.get('/claseEstudiante', getClaseEstudiante); //claseEstudiante?id=000000000X
 app.get('/deleteEstudiante', deleteEstudiante); //http://localhost:3000/deleteEstudiante?id=000000000X
 
 //Tarea routes
-app.get('/tareasEstudiante', getTareasEstudiante); //tareasEstudiante?id=000000000X
+app.get('/tareasEstudiante', getTareasEstudiante); //   
 app.get('/patchTareaComp', patchTareaComp); //patchTareaComp?est_id=000000000X&hw_id=000000000X
+app.get('/postTarea', postTarea); //postTarea?class_id=000000000X&hw_name=nombre&descript=descripcion&due_date=fecha&priority=prioridad
 
 //Clase routes
 app.get('/postInscribirClase', postInscribirClase); //postInscribirClase?est_id=000000000X&clase_id=000000000X
+app.get('/getClase', getClase); //getClase?class_id=00X
