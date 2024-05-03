@@ -7,6 +7,7 @@ export default function LoginPag(props) {
 
     const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
+    const [userId, setUserId] = useState('');
 
     const handleUser = (event) => {setUser(event.target.value)};
     const handlePasswrod = (event) => {setPassword(event.target.value)};
@@ -15,17 +16,15 @@ export default function LoginPag(props) {
     
 
     function checkCredentials(){
-        const userCheck = user == "Juan"; // Esos son valores que se tienen que regresar de la db
-        const passCheck = password == "1234"; 
-        const userId = "1234";
+        const userCheck = user; // Esos son valores que se tienen que regresar de la db
+        const passCheck = password == "1234";
 
-        if(userCheck && passCheck){
-            if(userId[0] == 1){
-                props.tipo(1);
-            }
-            else{
-                props.tipo(2);
-            }
+        if(userCheck == "Juan" && passCheck){
+            props.tipo(1);
+            
+        }
+        else if(userCheck == "Pedro" && passCheck){
+            props.tipo(2);
         }
         else{
             setShowNegacion(true);
