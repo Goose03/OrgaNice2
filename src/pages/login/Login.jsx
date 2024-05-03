@@ -17,7 +17,7 @@ export default function LoginPag(props) {
     function checkCredentials(){
         const userCheck = user == "Juan"; // Esos son valores que se tienen que regresar de la db
         const passCheck = password == "1234"; 
-        const userId = "2234";
+        const userId = "1234";
 
         if(userCheck && passCheck){
             if(userId[0] == 1){
