@@ -16,9 +16,9 @@ export default function Course() {
     },
     {
       imagen: img_1,
-      title: "Implementación metodos",
-      prof: "Vladimir",
-      codigoClase: "2145",
+      title: "Implementación de métodos",
+      prof: "Pedrito",
+      codigoClase: "002",
     },
 
     {
@@ -97,7 +97,7 @@ export default function Course() {
             <div className="w-1/2 ml-2 flex flex-col justify-between items-end break-words">
               {/* Div for the heading */}
               <div>
-                <h2 className=" text-white text-xl ml-2 font-semibold">
+                <h2 className=" text-white text-lg font-semibold">
                   {courseList[currentSlide].title}
                 </h2>
               </div>

@@ -6,7 +6,7 @@ import Tarea from "./Tarea"
 
 export default function ToDo(){
 
-    const [Tareas, setTareas] = useState([{id:123, clase:'IMC', nombre:'Practica 1', desc:'Lorem', priori:2, fecha:'00/00/0000'},
+    const [Tareas, setTareas] = useState([{id:123, clase:'001', nombre:'Practica 1', desc:'Lorem', priori:2, fecha:'03/05/2024'},
                                           {id:124, clase:'pers', nombre:'Practica 2', desc:'Lorem', priori:3, fecha:'00/00/0000'}
     ]);
 
