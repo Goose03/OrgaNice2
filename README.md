@@ -78,7 +78,7 @@ To get started with OrgaNice, follow these steps:
 
 ---
 
-For any questions or further information, feel free to contact us at [support@organice.com](mailto:support@organice.com).
+For any questions or further information, feel free to contact us!
 
 ---
 # React + Vite
